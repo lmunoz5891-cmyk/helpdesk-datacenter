@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Incidente</title>
+</head>
+<body>
+
+<header>
+    <h1>Reportar Incidente</h1>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a> |
+    <a href="reportar.html">Reportar Incidente</a> |
+    <a href="tickets.html">Tickets</a>
+</nav>
+
+<main>
+
+<section>
+    <h2>Registro de Incidentes</h2>
+
+    <article>
+
+        <h3>Formulario de Captura</h3>
+
+        <form>
+
+            <label for="titulo">Título del incidente:</label><br>
+            <input type="text" id="titulo" name="titulo" required>
+
+            <br><br>
+
+            <label for="categoria">Categoría:</label><br>
+
+            <select id="categoria" name="categoria" required>
+                <option value="">Seleccione una categoría</option>
+                <option value="Red">Red</option>
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+            </select>
+
+            <br><br>
+
+            <p>Prioridad:</p>
+
+            <input type="radio" id="alta" name="prioridad" value="Alta" required>
+            <label for="alta">Alta</label>
+
+            <input type="radio" id="media" name="prioridad" value="Media">
+            <label for="media">Media</label>
+
+            <input type="radio" id="baja" name="prioridad" value="Baja">
+            <label for="baja">Baja</label>
+
+            <br><br>
+
+            <label for="descripcion">Descripción:</label><br>
+
+            <textarea id="descripcion" name="descripcion" rows="5" cols="50" required></textarea>
+
+            <br><br>
+
+            <button type="submit">
+                Enviar Ticket
+            </button>
+
+        </form>
+
+    </article>
+
+</section>
+
+</main>
+
+<footer>
+    <p>Universidad Técnica - Help Desk Data Center</p>
+</footer>
+
+</body>
+</html>
