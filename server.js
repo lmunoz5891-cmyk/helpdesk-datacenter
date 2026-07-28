@@ -3,7 +3,8 @@ const cors = require("cors");
 
 const app = express();
 
-const PORT = 3000;
+// Puerto para producción o desarrollo
+const PORT = process.env.PORT || 3000;
 
 const ticketRoutes = require("./backend/routes/ticketRoutes");
 
@@ -13,7 +14,7 @@ app.use(cors());
 // Leer JSON
 app.use(express.json());
 
-// Ruta de prueba
+// Ruta principal
 app.get("/", (req, res) => {
     res.send("Servidor funcionando correctamente");
 });
@@ -23,5 +24,5 @@ app.use("/", ticketRoutes);
 
 // Iniciar servidor
 app.listen(PORT, () => {
-    console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
+    console.log(`Servidor ejecutándose en el puerto ${PORT}`);
 });
